@@ -16,13 +16,13 @@ int i = 0;
 
 while (format[i] != '\0')
     {
-        if (format[i] != '%')
-            _putchar(format[i]);
+	if (format[i] != '%')
+		_putchar(format[i]);
     else
     {
-        if (format[i + 1] == 'c')
-            _putchar(va_arg(args, int));
-                i++;
+	if (format[i + 1] == 'c')
+		_putchar(va_arg(args, int));
+		i++;
     }
     i++;
     }
