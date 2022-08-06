@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - prints anything
@@ -7,7 +8,15 @@
  * 
  * Return: returns the number of characters printed 
  */
-int printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
-    
+  int i = 0;
+  while (format[i] != '\n')
+  {
+    _putchar(format[i]);
+    i++;
+  }
+
+  return 0;
+
 }
