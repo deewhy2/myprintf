@@ -5,18 +5,29 @@
  * _printf - prints anything
  * @format: the format string
  * Author: Lawal Oladayo
- * 
- * Return: returns the number of characters printed 
+ *
+ * Return: returns the number of characters printed
  */
 int _printf(const char *format, ...)
 {
-  int i = 0;
-  while (format[i] != '\n')
-  {
-    _putchar(format[i]);
+    va_list args;
+    int i = 0;
+    va_start(args, format);
+
+    while(format[i] != '\0')
+    {
+        if(format[i] != '%')
+          _putchar(format[i]);
+    else
+    {
+        if(format[i+1] == 'c')
+            _putchar(va_arg(args, int));
+            i++;
+    }
     i++;
-  }
+    }
 
-  return 0;
+    va_end(args);
 
+    return (0);
 }

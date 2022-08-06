@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    _printf("Test my Printf function\n");
+    _printf("Test %c Printf function\n", 'm');
 
     return (0);
 }
