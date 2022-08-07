@@ -22,23 +22,28 @@ while (format[i] != '\0')
 		_putchar(format[i]);
     else
         {
-        if (format[i + 1] == 'c')
-        {
-            _putchar(va_arg(args, int));
-            i++;
-        }
-        else if (format[i + 1] == 's')
-        {
-            i++;
-            str = va_arg(args, char *);
-            k=0;
-            while (str[k] != '\0')
+            if (format[i + 1] == 'c')
             {
-                _putchar(str[k]);
-                k++;
+                _putchar(va_arg(args, int));
+                i++;
             }
-            
-    }
+            else if (format[i + 1] == 's')
+            {
+                i++;
+                str = va_arg(args, char *);
+                k=0;
+                while (str[k] != '\0')
+                {
+                    _putchar(str[k]);
+                    k++;
+                }
+                
+            }
+            else if(format [i+1] == '%')
+            {
+                i++;
+                _putchar('%');
+            }
         }
     
     i++;
