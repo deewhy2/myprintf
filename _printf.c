@@ -22,9 +22,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 			{
-                _putchar(format[i]);
+			_putchar(format[i]);
 			num_char_prntd++;
-            }
+			}
 		else
 		{
 			if (format[i + 1] == 'c')
@@ -54,8 +54,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
     }
-	
-	va_end(args);
 
+	va_end(args);
 	return (num_char_prntd);
 }
