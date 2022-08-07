@@ -54,7 +54,10 @@ int _printf(const char *format, ...)
 		}
 		i++;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab3f2994c66edbd6b711057c2158525b032390c4
 	va_end(args);
 	return (num_char_prntd);
-}
+} 
