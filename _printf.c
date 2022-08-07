@@ -22,9 +22,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 			{
-			_putchar(format[i]);
+                _putchar(format[i]);
 			num_char_prntd++;
-			}
+            }
 		else
 		{
 			if (format[i + 1] == 'c')
@@ -54,14 +54,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> ab3f2994c66edbd6b711057c2158525b032390c4
-=======
 	
->>>>>>> 95600984f614ec4b6b411bedc4a210a5ca0090ea
 	va_end(args);
 
 	return (num_char_prntd);
